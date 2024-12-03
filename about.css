@@ -1,0 +1,129 @@
+/* Import the Nunito font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+
+/* Global styles */
+* {
+  font-family: Nunito, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container with background image */
+.responsive-container-block.bigContainer {
+  padding: 10px 30px;
+  background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb29.png");
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  min-height: 100vh; /* Ensures the container is at least the height of the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner container */
+.responsive-container-block.Container {
+  max-width: 800px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 150px auto;
+}
+
+/* Text styles */
+.text-blk {
+  line-height: 25px;
+}
+
+.text-blk.heading {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.text-blk.subHeading {
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+
+/* Social icons */
+.socialIcon {
+  width: 33px;
+  height: 33px;
+}
+
+.social-icons-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.social-icon {
+  margin: 0 50px;
+}
+
+.social-icon:hover {
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .text-blk.heading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .text-blk.subHeading {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .social-icons-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icon {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .responsive-container-block.bigContainer {
+    padding: 10px 20px;
+  }
+
+  .text-blk.heading {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .text-blk.subHeading {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+
+  .social-icons-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-icon {
+    margin: 0 20px;
+  }
+}

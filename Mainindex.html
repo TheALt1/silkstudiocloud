@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Silk studios/main</title>
+        <link rel="stylesheet" type="text/css" href="styleP.css">
+    </head>
+    
+    <body>
+        <header>
+            
+            <a href="#" class="logo">Silk Studios</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a class="nav-link" href="./about.html">About Us</a>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Silk Studios</h2>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        
+        <div class="animated-section">
+                <h2>Discover More</h2>
+                <p>Explore the world of creativity and innovation with Silk Studios. Scroll down to dive into our mesmerizing projects!</p>
+                <div class="cards">
+                  <a href="./artist.html" class="card" id="card1">
+                    <img src="artistpfp.jpg" alt="Card 1 Image">
+                </a>
+                <a href="./artist.html" class="card" id="card1">
+                  <img src="artist2.jpg" alt="Card 1 Image">
+              </a>
+              <a href="./artist.html" class="card" id="card1">
+                <img src="artist3.jpg" alt="Card 1 Image">
+            </a>
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="sec" id="sec">
+
+            <style>
+                .container {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 25vh; /* or any other desired height */
+                }
+              
+                .button {
+                  border-radius: 4px;
+                  background-color: #000000;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 19px;
+                  padding: 20px;
+                  width: 200px;
+                  transition: all 0.2s;
+                  cursor: pointer;
+                  margin: 5px;
+                }
+              
+                .button span {
+                  cursor: pointer;
+                  display: inline-block;
+                  position: relative;
+                  transition: 0.5s;
+                }
+              
+                .button span:after {
+                  content: '\00bb';
+                  position: absolute;
+                  opacity: 0;
+                  top: 0;
+                  right: -50px;
+                  transition: 0.5s;
+                }
+              
+                .button:hover span {
+                  padding-right: 25px;
+                }
+              
+                .button:hover span:after {
+                  opacity: 1;
+                  right: 0;
+                }
+              </style>
+              
+              <div class="container">
+                <a href="index.html">
+                <button class="button"><span>Get Started</span></button>
+                </a>
+              </div>
+
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
